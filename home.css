@@ -18,6 +18,7 @@ body {
 .logo-img {
   width: 206px;
   height: 33px;
+  max-width: 100%;
 }
 
 .hero-section {
@@ -49,17 +50,31 @@ body {
   padding-top: 15rem;
 }
 
+.hand-image img,
+.robot-image img {
+  width: 100%;
+  height: auto;
+}
+
 .hand-image,
 .robot-image {
   width: 100%;
-  max-width: 300px;
-  height: 300px;
-  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #6b7280;
   font-size: 14px;
+}
+
+.hero-section .row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.hero-section .row > div:first-child,
+.hero-section .row > div:last-child {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .btn-custom {
@@ -143,15 +158,19 @@ body {
 }
 
 .carousel-indicators button {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #d9d9d9;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #9ca3af !important;
+  opacity: 0.5 !important;
+  margin: 0 4px !important;
+  border: none !important;
+  padding: 0 !important;
 }
 
 .carousel-indicators button.active {
-  background: #3c3c4399;
-  border-radius: 50%;
+  background: #6b7280 !important;
+  opacity: 1 !important;
 }
 
 .footer-cta {
@@ -221,12 +240,247 @@ body {
   border-radius: 3px;
 }
 
-@media (max-width: 768px) {
+/* Tablet Responsive */
+@media (max-width: 992px) {
   .hero-title {
-    font-size: 2.25rem;
+    font-size: 2.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6rem;
+  }
+
+  .hand-image {
+    padding-top: 10rem;
+  }
+
+  .cta-button {
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+  }
+
+  .launch-title {
+    font-size: 2rem;
+  }
+
+  .launch-details {
+    font-size: 1.25rem;
+  }
+
+  .launch-label {
+    font-size: 1.25rem;
   }
 
   .evolve-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
+  }
+
+  .evolve-tagline,
+  .evolve-subtitle {
+    font-size: 1.25rem;
+  }
+
+  .carousel-slide {
+    padding: 40px;
+    min-height: 500px;
+  }
+
+  .slide-title {
+    font-size: 2rem;
+  }
+
+  .slide-text {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  .footer-cta h2 {
+    font-size: 2rem;
+  }
+
+  .footer-cta-right {
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+    padding: 0 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .hero-subtitle br {
+    display: none;
+  }
+
+  .hand-image {
+    padding-top: 5rem;
+  }
+
+  .cta-button {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 12px 28px;
+    font-size: 0.9rem;
+  }
+
+  .launch-title {
+    font-size: 1.5rem;
+  }
+
+  .launch-details {
+    font-size: 1rem;
+    gap: 2rem !important;
+  }
+
+  .launch-label {
+    font-size: 1rem;
+  }
+
+  .evolve-tagline {
+    font-size: 1rem;
+  }
+
+  .evolve-title {
+    font-size: 2rem;
+  }
+
+  .evolve-subtitle {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .evolve-subtitle br {
+    display: none;
+  }
+
+  .carousel-slide {
+    padding: 30px 20px;
+    min-height: 400px;
+  }
+
+  .slide-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .slide-text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  .footer-cta h2 {
+    font-size: 1.75rem;
+  }
+
+  .footer-cta h2 br {
+    display: none;
+  }
+
+  .footer-cta p {
+    font-size: 0.9rem;
+  }
+
+  .btn-red {
+    padding: 12px 28px;
+    font-size: 0.8rem;
+  }
+
+  .footer-cta-right {
+    font-size: 0.9rem;
+    text-align: left !important;
+    margin-top: 2rem;
+  }
+
+  .footer-cta-right br {
+    display: none;
+  }
+
+  .footer-section h3 {
+    font-size: 0.8rem;
+  }
+
+  .footer-section p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .hand-image {
+    padding-top: 3rem;
+  }
+
+  .cta-button {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .launch-title {
+    font-size: 1.25rem;
+  }
+
+  .launch-details {
+    font-size: 0.9rem;
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+
+  .launch-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .evolve-title {
+    font-size: 1.75rem;
+  }
+
+  .evolve-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .carousel-slide {
+    padding: 20px 15px;
+    min-height: 350px;
+  }
+
+  .slide-title {
+    font-size: 1.25rem;
+  }
+
+  .slide-text {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+  }
+
+  .footer-cta h2 {
+    font-size: 1.5rem;
+  }
+
+  .footer-cta-right {
+    font-size: 0.85rem;
+  }
+
+  .logo-img {
+    width: 150px;
+    height: auto;
   }
 }

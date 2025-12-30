@@ -1,501 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!-- Basic -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AeroSapiens - Human Intelligence, Amplified</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>AeroSapiens — Human Intelligence, Amplified</title>
+
+    <!-- Primary SEO -->
+    <meta
+      name="description"
+      content="AeroSapiens amplifies human intelligence with advanced AI systems for faster decisions, deeper insights, and smarter automation."
+    />
+    <meta
+      name="keywords"
+      content="AeroSapiens, AI, artificial intelligence, human intelligence, analytics, automation"
+    />
+    <meta name="author" content="AeroSapiens" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="AeroSapiens — Human Intelligence, Amplified"
+    />
+    <meta
+      property="og:description"
+      content="Amplifying human intelligence with powerful AI-driven insights and automation."
+    />
+    <meta property="og:url" content="https://aerosapiens.com" />
+    <meta property="og:image" content="https://aerosapiens.com/og-image.png" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="AeroSapiens — Human Intelligence, Amplified"
+    />
+    <meta
+      name="twitter:description"
+      content="AI systems designed to enhance human thinking, speed, and decision-making."
+    />
+    <meta name="twitter:image" content="https://aerosapiens.com/og-image.png" />
+
+    <!-- Theme / UI -->
+    <meta name="theme-color" content="#027056" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+
+    <!-- Styles -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, sans-serif;
-        background: #1a1a1a;
-        color: #333;
-        box-sizing: border-box;
-      }
-
-      .header {
-        background: white;
-        border-bottom: 2px solid #7f7f7f;
-      }
-
-      .logo-img {
-        width: 206px;
-        height: 33px;
-        max-width: 100%;
-      }
-
-      .hero-section {
-        background: white;
-        background-image: url(./assets/hero-background-image-4.png);
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-      }
-
-      .hero-title {
-        font-size: 3.563rem;
-        font-weight: 700;
-        color: #1a1a1a;
-      }
-
-      .hero-subtitle {
-        font-size: 1.5rem;
-        color: #4b5563;
-        line-height: 1.75rem;
-      }
-
-      .cta-button {
-        margin-top: 6.813rem;
-        margin-bottom: 4.313rem;
-      }
-
-      .hand-image {
-        padding-top: 15rem;
-      }
-
-      .hand-image img,
-      .robot-image img {
-        width: 100%;
-        height: auto;
-      }
-
-      .hand-image,
-      .robot-image {
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #6b7280;
-        font-size: 14px;
-      }
-
-      .hero-section .row {
-        margin-left: 0;
-        margin-right: 0;
-      }
-
-      .hero-section .row > div:first-child,
-      .hero-section .row > div:last-child {
-        padding-left: 0;
-        padding-right: 0;
-      }
-
-      .btn-custom {
-        background: #1a1a1a;
-        color: white;
-        padding: 14px 32px;
-        border-radius: 25px;
-        font-size: 1rem;
-        border: none;
-        transition: all 0.2s;
-      }
-
-      .btn-custom:hover {
-        background: #333;
-        color: white;
-        transform: translateY(-2px);
-      }
-
-      .launch-title {
-        font-size: 2.25rem;
-        font-weight: 500;
-      }
-
-      .launch-details {
-        font-size: 1.5rem;
-      }
-
-      .launch-label {
-        font-size: 1.5rem;
-        font-weight: 400;
-      }
-
-      .evolve-section {
-        background: white;
-      }
-
-      .evolve-tagline {
-        font-size: 1.5rem;
-        color: #262626;
-        font-weight: 600;
-      }
-
-      .evolve-title {
-        font-size: 4rem;
-        font-weight: 600;
-      }
-
-      .evolve-subtitle {
-        font-size: 1.5rem;
-        color: #262626;
-        line-height: 1.75rem;
-        font-weight: 300;
-      }
-
-      .carousel-item {
-        background-size: 100%, 20px 20px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        border-radius: 20px;
-      }
-
-      .carousel-slide {
-        padding: 60px;
-        color: white;
-        min-height: 599px;
-        text-align: left;
-        border-radius: 20px;
-        background-image: linear-gradient(225deg, #323c9700 60%, #323c97);
-      }
-
-      .slide-title {
-        font-size: 2.25rem;
-        font-weight: 500;
-      }
-
-      .slide-text {
-        font-size: 1.5rem;
-        line-height: 2rem;
-        max-width: 40rem;
-        font-weight: 300;
-      }
-
-      .carousel-indicators button {
-        width: 8px !important;
-        height: 8px !important;
-        border-radius: 50% !important;
-        background: #9ca3af !important;
-        opacity: 0.5 !important;
-        margin: 0 4px !important;
-        border: none !important;
-        padding: 0 !important;
-      }
-
-      .carousel-indicators button.active {
-        background: #6b7280 !important;
-        opacity: 1 !important;
-      }
-
-      .footer-cta {
-        background: #1a1a1a;
-      }
-
-      .footer-cta h2 {
-        color: white;
-        font-size: 2.25rem;
-      }
-
-      .footer-cta p {
-        color: #9ca3af;
-        font-size: 1rem;
-      }
-
-      .footer-cta-right {
-        color: #ef4444;
-        font-size: 1.125rem;
-        font-style: italic;
-      }
-
-      .footer-cta-right > span {
-        color: white;
-      }
-
-      .btn-red {
-        background: #ef4444;
-        color: white;
-        padding: 14px 32px;
-        border-radius: 5px;
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        font-weight: 600;
-        letter-spacing: 0.5px;
-        border: none;
-        transition: background 0.2s;
-      }
-
-      .btn-red:hover {
-        background: #dc2626;
-        color: white;
-      }
-
-      .footer-info {
-        background: #1a1a1a;
-        color: white;
-      }
-
-      .footer-section h3 {
-        color: #9ca3af;
-        font-size: 0.875rem;
-        text-transform: uppercase;
-        font-weight: 600;
-      }
-
-      .footer-section p {
-        color: white;
-        line-height: 1.8;
-        font-size: 0.875rem;
-      }
-
-      .footer-logo-icon {
-        width: 30px;
-        height: 30px;
-        background: white;
-        border-radius: 3px;
-      }
-
-      /* Tablet Responsive */
-      @media (max-width: 992px) {
-        .hero-title {
-          font-size: 2.75rem;
-        }
-
-        .hero-subtitle {
-          font-size: 1.25rem;
-          line-height: 1.6rem;
-        }
-
-        .hand-image {
-          padding-top: 10rem;
-        }
-
-        .cta-button {
-          margin-top: 4rem;
-          margin-bottom: 3rem;
-        }
-
-        .launch-title {
-          font-size: 2rem;
-        }
-
-        .launch-details {
-          font-size: 1.25rem;
-        }
-
-        .launch-label {
-          font-size: 1.25rem;
-        }
-
-        .evolve-title {
-          font-size: 3rem;
-        }
-
-        .evolve-tagline,
-        .evolve-subtitle {
-          font-size: 1.25rem;
-        }
-
-        .carousel-slide {
-          padding: 40px;
-          min-height: 500px;
-        }
-
-        .slide-title {
-          font-size: 2rem;
-        }
-
-        .slide-text {
-          font-size: 1.25rem;
-          line-height: 1.75rem;
-        }
-
-        .footer-cta h2 {
-          font-size: 2rem;
-        }
-
-        .footer-cta-right {
-          font-size: 1rem;
-          margin-top: 2rem;
-        }
-      }
-
-      /* Mobile Responsive */
-      @media (max-width: 768px) {
-        .hero-title {
-          font-size: 2rem;
-          padding: 0 1rem;
-        }
-
-        .hero-subtitle {
-          font-size: 1rem;
-          line-height: 1.5rem;
-          padding: 0 1rem;
-        }
-
-        .hero-subtitle br {
-          display: none;
-        }
-
-        .hand-image {
-          padding-top: 5rem;
-        }
-
-        .cta-button {
-          margin-top: 2rem;
-          margin-bottom: 2rem;
-          padding: 12px 28px;
-          font-size: 0.9rem;
-        }
-
-        .launch-title {
-          font-size: 1.5rem;
-        }
-
-        .launch-details {
-          font-size: 1rem;
-          gap: 2rem !important;
-        }
-
-        .launch-label {
-          font-size: 1rem;
-        }
-
-        .evolve-tagline {
-          font-size: 1rem;
-        }
-
-        .evolve-title {
-          font-size: 2rem;
-        }
-
-        .evolve-subtitle {
-          font-size: 1rem;
-          line-height: 1.5rem;
-          padding: 0 1rem;
-        }
-
-        .evolve-subtitle br {
-          display: none;
-        }
-
-        .carousel-slide {
-          padding: 30px 20px;
-          min-height: 400px;
-        }
-
-        .slide-title {
-          font-size: 1.5rem;
-          margin-bottom: 1rem;
-        }
-
-        .slide-text {
-          font-size: 1rem;
-          line-height: 1.5rem;
-        }
-
-        .footer-cta h2 {
-          font-size: 1.75rem;
-        }
-
-        .footer-cta h2 br {
-          display: none;
-        }
-
-        .footer-cta p {
-          font-size: 0.9rem;
-        }
-
-        .btn-red {
-          padding: 12px 28px;
-          font-size: 0.8rem;
-        }
-
-        .footer-cta-right {
-          font-size: 0.9rem;
-          text-align: left !important;
-          margin-top: 2rem;
-        }
-
-        .footer-cta-right br {
-          display: none;
-        }
-
-        .footer-section h3 {
-          font-size: 0.8rem;
-        }
-
-        .footer-section p {
-          font-size: 0.8rem;
-        }
-      }
-
-      /* Small Mobile */
-      @media (max-width: 576px) {
-        .hero-title {
-          font-size: 1.75rem;
-        }
-
-        .hero-subtitle {
-          font-size: 0.9rem;
-        }
-
-        .hand-image {
-          padding-top: 3rem;
-        }
-
-        .cta-button {
-          margin-top: 1.5rem;
-          margin-bottom: 1.5rem;
-        }
-
-        .launch-title {
-          font-size: 1.25rem;
-        }
-
-        .launch-details {
-          font-size: 0.9rem;
-          flex-direction: column !important;
-          gap: 1rem !important;
-        }
-
-        .launch-label {
-          font-size: 0.9rem;
-          margin-bottom: 0.5rem !important;
-        }
-
-        .evolve-title {
-          font-size: 1.75rem;
-        }
-
-        .evolve-subtitle {
-          font-size: 0.9rem;
-        }
-
-        .carousel-slide {
-          padding: 20px 15px;
-          min-height: 350px;
-        }
-
-        .slide-title {
-          font-size: 1.25rem;
-        }
-
-        .slide-text {
-          font-size: 0.9rem;
-          line-height: 1.4rem;
-        }
-
-        .footer-cta h2 {
-          font-size: 1.5rem;
-        }
-
-        .footer-cta-right {
-          font-size: 0.85rem;
-        }
-
-        .logo-img {
-          width: 150px;
-          height: auto;
-        }
-      }
-    </style>
+    <link href="./home.css" rel="stylesheet" />
   </head>
   <body>
     <!-- Header -->
